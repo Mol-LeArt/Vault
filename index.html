@@ -1,6 +1,176 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <style>
+    .button {
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .connectButton {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+    }
+
+    .connectButton:hover {
+      background-color: black;
+      color: white;
+      border: 2px solid black;
+      transition-duration: 0.6s;
+    }
+
+	.mintButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #39FF14;
+    }
+
+    .mintButton:hover {
+      background-color: #39FF14;
+      color: white;
+      border: 2px solid #39FF14;
+      transition-duration: 0.6s;
+    }
+
+    .buyButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #FF6700;
+    }
+
+    .buyButton:hover {
+      background-color: #FF6700;
+      color: white;
+      border: 2px solid #FF6700;
+      transition-duration: 0.6s;
+    }
+
+    .putOnSaleButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #FF0000;
+    }
+
+    .putOnSaleButton:hover {
+      background-color: #FF0000;
+      color: white;
+      border: 2px solid #FF0000;
+      transition-duration: 0.6s;
+    }
+
+    .linkImageButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #57595D;
+    }
+
+    .linkImageButton:hover {
+      background-color: #57595D;
+      color: white;
+      border: 2px solid #57595D;
+      transition-duration: 0.6s;
+    }
+
+    .loadSaleButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #faed27;
+    }
+
+    .loadSaleButton:hover {
+      background-color: #faed27;
+      color: white;
+      border: 2px solid #faed27;
+      transition-duration: 0.6s;
+    }
+
+    .loadImageButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #bc13fe;
+    }
+
+    .loadImageButton:hover {
+      background-color: #bc13fe;
+      color: white;
+      border: 2px solid #bc13fe;
+      transition-duration: 0.6s;
+    }
+
+    .functionTitle {
+      color: black;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 50px;
+      font-style: italic;
+      margin: 4px 2px;
+    }
+
+    .prompt {
+      color: black;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-style: bold;
+      margin: 4px 2px;
+    }
+
+	.wrap {
+      overflow: auto;
+    }
+
+/* MVP.css v1.6.2 - https://github.com/andybrewer/mvp */
+:root {
+ --border-radius: 5px;
+ --box-shadow: 2px 2px 10px;
+ --color: #118bee;
+ --color-accent: #118bee15;
+ --color-bg: #fff;
+ --color-bg-secondary: #e9e9e9;
+ --color-secondary: #920de9;
+ --color-secondary-accent: #920de90b;
+ --color-shadow: #f4f4f4;
+ --color-text: #000;
+ --color-text-secondary: #999;
+ --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+ --hover-brightness: 1.2;
+ --justify-important: center;
+ --justify-normal: left;
+ --line-height: 1.5;
+ --width-card: 285px;
+ --width-card-medium: 460px;
+ --width-card-wide: 800px;
+ --width-content: 1080px;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+ :root {
+     --color: #0097fc;
+     --color-accent: #0097fc4f;
+     --color-bg: #333;
+     --color-bg-secondary: #555;
+     --color-secondary: #e20de9;
+     --color-secondary-accent: #e20de94f;
+     --color-shadow: #bbbbbb20;
+     --color-text: #f7f7f7;
+     --color-text-secondary: #aaa;
+ }
+}
+*/
+
+</style>
+<html lang="en">
   <head>
     <title>MolVault</title>
 
@@ -32,30 +202,50 @@
       </nav>
       <h1>Vault</h1>
       <p>
-        <button data-dh-feature="network" data-dh-property-enable="true">
+        <button
+        	class="connectButton"
+            data-dh-feature="network"
+            data-dh-property-enable="true">
           Connect
         </button>
       </p>
+      <h3> Balance </h3>
+      <div
+         data-dh-feature="user"
+         data-dh-property-address="true"
+         data-dh-modifier-display="short">
+      </div>
+      	<section>
+            <aside>
+              <section>
+                <div
+                  data-dh-feature="user"
+                  data-dh-property-balance
+                  data-dh-modifier-units="ether"
+                  data-dh-modifier-decimals="3">
+                </div>
+                &nbsp; ETH
+              </section>
+            </aside>
+          </section>
     </header>
     <div>
       <header>
-        <section>
-          <header>
             <div
               data-dh-feature="customContract"
-              data-dh-property-method-id="jsuh"
+              data-dh-property-method-id="_6PY"
               data-dh-property-auto-invoke="false"
               data-dh-property-contract-name="MolVault"
-              data-dh-property-method-name="drop"
+              data-dh-property-method-name="safekeep"
             >
-              <h3>Drop</mark></h3>
+              <h3>Deposit</h3>
               <section>
                 <aside>
                   <section>
                     <input
                       type="text"
                       placeholder="Token Address"
-                      data-dh-property-method-id="jsuh"
+                      data-dh-property-method-id="_6PY"
                       data-dh-property-input-name="tokenAddress"
                     />
                   </section>
@@ -63,64 +253,87 @@
                     <input
                       type="text"
                       placeholder="Token ID"
-                      data-dh-property-method-id="jsuh"
+                      data-dh-property-method-id="_6PY"
                       data-dh-property-input-name="tokenId"
                     />
                   </section>
                   <section>
                     <input
                       type="text"
-                      placeholder="Purchase Price in Ξ"
-                      data-dh-property-method-id="jsuh"
+                      placeholder="Price in Wei"
+                      data-dh-property-method-id="_6PY"
                       data-dh-property-input-name="purchasePrice"
                     />
                   </section>
                   <section>
                     <input
                       type="text"
-                      placeholder="$Social to Airdop" 
-                      data-dh-property-method-id="jsuh"
-                      data-dh-property-input-name="$social"
-                    />
-                  </section>
-                  <section>
-                    <input
-                      type="text"
-                      placeholder="Airdrop Amount"
-                      data-dh-property-method-id="jsuh"
-                      data-dh-property-input-name="airdropAmount"
-                    />
-                  </section>
-                  <section>
-                    <input
-                      type="text"
-                      placeholder="Royalties % to decay from"
-                      data-dh-property-method-id="jsuh"
+                      placeholder="Starting Royalties"
+                      data-dh-property-method-id="_6PY"
                       data-dh-property-input-name="startingRoyalties"
                     />
                   </section>
                   <section>
                     <input
                       type="text"
-                      placeholder="Put on sale? 1 - yes, 0 - no"
-                      data-dh-property-method-id="jsuh"
+                      placeholder="Sale? 1 - Yes, 0 - No"
+                      data-dh-property-method-id="_6PY"
                       data-dh-property-input-name="forSale"
                     />
                   </section>
                   <section>
                     <input
                       type="text"
-                      placeholder="Notes"
-                      data-dh-property-method-id="jsuh"
+                      placeholder="Details"
+                      data-dh-property-method-id="_6PY"
                       data-dh-property-input-name="details"
                     />
                   </section>
 
                   <button
                     data-dh-property-invoke="true"
-                    data-dh-property-method-id="jsuh"
+                    data-dh-property-method-id="_6PY"
                   >
-                    drop
+                    Deposit
+                  </button>
+                </aside>
+              </section>
+            </div>
+          </header>
+      <header>
+        <section>
+          <header>
+            <div
+              data-dh-feature="customContract"
+              data-dh-property-method-id="FEpA"
+              data-dh-property-auto-invoke="false"
+              data-dh-property-contract-name="MolVault"
+              data-dh-property-method-name="gasMeter"
+            >
+              <h3>Check UBI</mark></h3>
+              <section>
+                <aside>
+                  <section>
+                    <input
+                      type="text"
+                      placeholder="Your ETH Address"
+                      data-dh-property-method-id="FEpA"
+                      data-dh-property-input-name="[0]"
+                    />
+                    <p><i>1 = whitelisted, 0 = not whitelisted</i></p>
+                  </section>
+                  <div
+                    data-dh-property-method-id="FEpA"
+                    data-dh-property-outputs="true"
+                  >
+                    <pre>Output...</pre>
+                  </div>
+
+                  <button
+                    data-dh-property-invoke="true"
+                    data-dh-property-method-id="FEpA"
+                  >
+                    🛂
                   </button>
                 </aside>
               </section>
@@ -129,19 +342,63 @@
           <header>
             <div
               data-dh-feature="customContract"
-              data-dh-property-method-id="tGoS"
+              data-dh-property-method-id="WXrC"
+              data-dh-property-auto-invoke="false"
+              data-dh-property-contract-name="MolVault"
+              data-dh-property-method-name="mints"
+            >
+              <h3>Mint History</h3>
+              <section>
+                <aside>
+                  <section>
+                    <input
+                      type="text"
+                      placeholder="Your ETH Address"
+                      data-dh-property-method-id="WXrC"
+                      data-dh-property-input-name="[0]"
+                    />
+                  </section>
+                  <section>
+                    <input
+                      type="text"
+                      placeholder="Mints"
+                      data-dh-property-method-id="WXrC"
+                      data-dh-property-input-name="[1]"
+                    />
+                  </section>
+                  <div
+                    data-dh-property-method-id="WXrC"
+                    data-dh-property-outputs="true"
+                  >
+                    <pre>Output...</pre>
+                  </div>
+
+                  <button
+                    data-dh-property-invoke="true"
+                    data-dh-property-method-id="WXrC"
+                  >
+                    Check History
+                  </button>
+                </aside>
+              </section>
+            </div>
+          </header>
+          <header>
+            <div
+              data-dh-feature="customContract"
+              data-dh-property-method-id="Le6u"
               data-dh-property-auto-invoke="false"
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="purchase"
             >
-              <h3>Buy</mark></h3>
+              <h3>Buy</h3>
               <section>
                 <aside>
                   <section>
                     <input
                       type="text"
                       placeholder="Token Address"
-                      data-dh-property-method-id="tGoS"
+                      data-dh-property-method-id="Le6u"
                       data-dh-property-input-name="tokenAddress"
                     />
                   </section>
@@ -149,24 +406,24 @@
                     <input
                       type="text"
                       placeholder="Token ID"
-                      data-dh-property-method-id="tGoS"
+                      data-dh-property-method-id="Le6u"
                       data-dh-property-input-name="tokenId"
                     />
                   </section>
                   <section>
                     <input
                       type="text"
-                      placeholder="Purchase Price in Ξ"
-                      data-dh-property-method-id="tGoS"
+                      placeholder="Price in Ξ"
+                      data-dh-property-method-id="Le6u"
                       data-dh-property-input-name="EthValue"
                     />
                   </section>
 
                   <button
                     data-dh-property-invoke="true"
-                    data-dh-property-method-id="tGoS"
+                    data-dh-property-method-id="Le6u"
                   >
-                    purchase
+                    💳
                   </button>
                 </aside>
               </section>
@@ -175,28 +432,28 @@
           <header>
             <div
               data-dh-feature="customContract"
-              data-dh-property-method-id="g1Xi"
+              data-dh-property-method-id="TBHR"
               data-dh-property-auto-invoke="false"
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="updateGasMeter"
             >
-              <h3>Artists' Corner</mark></h3>
+              <h3>Artists' Corner</h3>
               <section>
                 <aside>
                   <section>
                     <input
-                      type="text"
-                      placeholder="Etherscan link"
-                      data-dh-property-method-id="g1Xi"
+                      type="Etherscan Link"
+                      placeholder="Etherscan Link"
+                      data-dh-property-method-id="TBHR"
                       data-dh-property-input-name="etherscan"
                     />
                   </section>
 
                   <button
                     data-dh-property-invoke="true"
-                    data-dh-property-method-id="g1Xi"
+                    data-dh-property-method-id="TBHR"
                   >
-                    updateGasMeter
+                    Update
                   </button>
                 </aside>
               </section>
@@ -205,19 +462,19 @@
           <header>
             <div
               data-dh-feature="customContract"
-              data-dh-property-method-id="5E9t"
+              data-dh-property-method-id="IXmt"
               data-dh-property-auto-invoke="false"
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="updateSale"
             >
-              <h3>Put on Sale</mark></h3>
+              <h3>Update Sale</h3>
               <section>
                 <aside>
                   <section>
                     <input
                       type="text"
                       placeholder="Token Address"
-                      data-dh-property-method-id="5E9t"
+                      data-dh-property-method-id="IXmt"
                       data-dh-property-input-name="tokenAddress"
                     />
                   </section>
@@ -225,46 +482,30 @@
                     <input
                       type="text"
                       placeholder="Token ID"
-                      data-dh-property-method-id="5E9t"
+                      data-dh-property-method-id="IXmt"
                       data-dh-property-input-name="tokenId"
                     />
                   </section>
                   <section>
                     <input
                       type="text"
-                      placeholder="Purchase Price in Ξ"
-                      data-dh-property-method-id="5E9t"
+                      placeholder="Price in Wei"
+                      data-dh-property-method-id="IXmt"
                       data-dh-property-input-name="purchasePrice"
                     />
                   </section>
                   <section>
                     <input
                       type="text"
-                      placeholder="Airdrop Amount"
-                      data-dh-property-method-id="5E9t"
-                      data-dh-property-input-name="airdropAmount"
-                    />
-                  </section>
-                  <section>
-                    <input
-                      type="text"
-                      placeholder="Put on Sale? 1 - yes, 0 - no"
-                      data-dh-property-method-id="5E9t"
+                      placeholder="Sale? 1 - Yes, 0 - No"
+                      data-dh-property-method-id="IXmt"
                       data-dh-property-input-name="forSale"
-                    />
-                  </section>
-                  <section>
-                    <input
-                      type="text"
-                      placeholder="Purchase Price in Ξ"
-                      data-dh-property-method-id="5E9t"
-                      data-dh-property-input-name="EthValue"
                     />
                   </section>
 
                   <button
                     data-dh-property-invoke="true"
-                    data-dh-property-method-id="5E9t"
+                    data-dh-property-method-id="IXmt"
                   >
                     updateSale
                   </button>
