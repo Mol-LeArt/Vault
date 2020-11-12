@@ -103,14 +103,39 @@
       transition-duration: 0.6s;
     }
 
-    .functionTitle {
+    .sectionTitle {
       color: black;
       padding: 16px 32px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
+      font-family: "Playfair Display";
       font-size: 50px;
       font-style: italic;
+      margin: 4px 2px;
+    }
+
+	.functionTitle {
+      color: black;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-family: "Playfair Display";
+      font-size: 20px;
+      font-style: normal;
+      margin: 4px 2px;
+    }
+
+	.paragraph {
+      color: black;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-family: Playfair Display;
+      font-size: 18px;
+      font-style: bold;
       margin: 4px 2px;
     }
 
@@ -200,7 +225,7 @@
           </li>
         </ul>
       </nav>
-      <h1>Vault</h1>
+      <h1 class="functionTitle">Vault</h1>
       <p>
         <button
         	class="connectButton"
@@ -229,6 +254,9 @@
             </aside>
           </section>
     </header>
+    <header>
+    	<h3 class="sectionTitle">Mol's Vault</h3>
+    </header>
     <div>
       <header>
             <div
@@ -238,7 +266,7 @@
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="safekeep"
             >
-              <h3>Deposit</h3>
+              <h3 class="functionTitle">Deposit</h3>
               <section>
                 <aside>
                   <section>
@@ -294,90 +322,7 @@
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="_6PY"
                   >
-                    Deposit
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-      <header>
-        <section>
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="FEpA"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="MolVault"
-              data-dh-property-method-name="gasMeter"
-            >
-              <h3>Check UBI</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    <input
-                      type="text"
-                      placeholder="Your ETH Address"
-                      data-dh-property-method-id="FEpA"
-                      data-dh-property-input-name="[0]"
-                    />
-                    <p><i>1 = whitelisted, 0 = not whitelisted</i></p>
-                  </section>
-                  <div
-                    data-dh-property-method-id="FEpA"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="FEpA"
-                  >
-                    🛂
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="WXrC"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="MolVault"
-              data-dh-property-method-name="mints"
-            >
-              <h3>Mint History</h3>
-              <section>
-                <aside>
-                  <section>
-                    <input
-                      type="text"
-                      placeholder="Your ETH Address"
-                      data-dh-property-method-id="WXrC"
-                      data-dh-property-input-name="[0]"
-                    />
-                  </section>
-                  <section>
-                    <input
-                      type="text"
-                      placeholder="Mints"
-                      data-dh-property-method-id="WXrC"
-                      data-dh-property-input-name="[1]"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="WXrC"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="WXrC"
-                  >
-                    Check History
+                    📥
                   </button>
                 </aside>
               </section>
@@ -391,7 +336,7 @@
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="purchase"
             >
-              <h3>Buy</h3>
+              <h3 class="functionTitle">Buy</h3>
               <section>
                 <aside>
                   <section>
@@ -423,37 +368,7 @@
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="Le6u"
                   >
-                    💳
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="TBHR"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="MolVault"
-              data-dh-property-method-name="updateGasMeter"
-            >
-              <h3>Artists' Corner</h3>
-              <section>
-                <aside>
-                  <section>
-                    <input
-                      type="Etherscan Link"
-                      placeholder="Etherscan Link"
-                      data-dh-property-method-id="TBHR"
-                      data-dh-property-input-name="etherscan"
-                    />
-                  </section>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="TBHR"
-                  >
-                    Update
+                    📤
                   </button>
                 </aside>
               </section>
@@ -467,7 +382,7 @@
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="updateSale"
             >
-              <h3>Update Sale</h3>
+              <h3 class="functionTitle">Update Sale</h3>
               <section>
                 <aside>
                   <section>
@@ -507,11 +422,155 @@
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="IXmt"
                   >
-                    updateSale
+                     📝
                   </button>
                 </aside>
               </section>
             </div>
+          </header>
+          <header>
+            <h3 class="sectionTitle">Mol's Residency</h3>
+            </br>
+			<p class="paragraph"> Is gas too high to share your artwork? </br> Let us cover your gas. Learn more here.</p>
+    </header>
+      <header>
+        <section>
+          <header>
+            <div
+              data-dh-feature="customContract"
+              data-dh-property-method-id="TBHR"
+              data-dh-property-auto-invoke="false"
+              data-dh-property-contract-name="MolVault"
+              data-dh-property-method-name="updateGasMeter"
+            >
+              <h3 class="functionTitle">Submit Latest Mint</h3>
+              <section>
+                <aside>
+                  <section>
+                    <input
+                      type="Etherscan Link"
+                      placeholder="Etherscan Link"
+                      data-dh-property-method-id="TBHR"
+                      data-dh-property-input-name="etherscan"
+                    />
+                  </section>
+
+                  <button class="buyButton"
+                    data-dh-property-invoke="true"
+                    data-dh-property-method-id="TBHR"
+                  >
+                    🎨
+                  </button>
+                </aside>
+              </section>
+            </div>
+          </header>
+          <header>
+            <div
+              data-dh-feature="customContract"
+              data-dh-property-method-id="FEpA"
+              data-dh-property-auto-invoke="false"
+              data-dh-property-contract-name="MolVault"
+              data-dh-property-method-name="gasMeter"
+            >
+              <h3 class="functionTitle">Check UBI</mark></h3>
+              <section>
+                <aside>
+                  <section>
+                    <input
+                      type="text"
+                      placeholder="Your ETH Address"
+                      data-dh-property-method-id="FEpA"
+                      data-dh-property-input-name="[0]"
+                    />
+                    <p><i>1 = whitelisted, 0 = not whitelisted</i></p>
+                  </section>
+                  <div
+                    data-dh-property-method-id="FEpA"
+                    data-dh-property-outputs="true"
+                  >
+                    <pre>Output...</pre>
+                  </div>
+
+                  <button
+                    data-dh-property-invoke="true"
+                    data-dh-property-method-id="FEpA"
+                  >
+                    🛂
+                  </button>
+                </aside>
+              </section>
+            </div>
+          </header>
+          <header>
+            <div
+              data-dh-feature="customContract"
+              data-dh-property-method-id="WXrC"
+              data-dh-property-auto-invoke="false"
+              data-dh-property-contract-name="MolVault"
+              data-dh-property-method-name="mints"
+            >
+              <h3 class="functionTitle">Mint History</h3>
+              <section>
+                <aside>
+                  <section>
+                    <input
+                      type="text"
+                      placeholder="Your ETH Address"
+                      data-dh-property-method-id="WXrC"
+                      data-dh-property-input-name="[0]"
+                    />
+                  </section>
+                  <section>
+                    <input
+                      type="text"
+                      placeholder="Mints"
+                      data-dh-property-method-id="WXrC"
+                      data-dh-property-input-name="[1]"
+                    />
+                  </section>
+                  <div
+                    data-dh-property-method-id="WXrC"
+                    data-dh-property-outputs="true"
+                  >
+                    <pre>Output...</pre>
+                  </div>
+
+                  <button
+                    data-dh-property-invoke="true"
+                    data-dh-property-method-id="WXrC"
+                  >
+                    🔦
+                  </button>
+                </aside>
+              </section>
+            </div>
+          </header>
+          <header>
+              <h3 class="functionTitle">Load Artwork</h3>
+              <section>
+                <aside>
+                  <section>
+                    <input
+                      type="text"
+                      placeholder="URL to Artwork"
+                      id="imageURL"
+                      name="inputbox1"
+                    />
+					<img id="image" src="" />
+                    <button class="loadImageButton" id="loadImage"> 🖼️ </button>
+
+                    <script type="text/javascript">
+                      document.getElementById("loadImage").onclick = function() {
+                      	var x = document.getElementById("imageURL").value;
+                        document.getElementById("image").src = x;
+                      }
+                    </script>
+                </aside>
+              </section>
+            </div>
+
+    </div>
           </header>
         </section>
       </header>
