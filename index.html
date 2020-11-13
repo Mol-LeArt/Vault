@@ -25,13 +25,13 @@
       transition-duration: 0.6s;
     }
 
-	.mintButton {
+	.depositButton {
       background-color: white;
       color: black;
       border: 2px solid #39FF14;
     }
 
-    .mintButton:hover {
+    .depositButton:hover {
       background-color: #39FF14;
       color: white;
       border: 2px solid #39FF14;
@@ -51,52 +51,65 @@
       transition-duration: 0.6s;
     }
 
-    .putOnSaleButton {
-      background-color: white;
-      color: black;
-      border: 2px solid #FF0000;
-    }
-
-    .putOnSaleButton:hover {
-      background-color: #FF0000;
-      color: white;
-      border: 2px solid #FF0000;
-      transition-duration: 0.6s;
-    }
-
-    .linkImageButton {
+    .updateButton {
       background-color: white;
       color: black;
       border: 2px solid #57595D;
     }
 
-    .linkImageButton:hover {
+    .updateButton:hover {
       background-color: #57595D;
       color: white;
       border: 2px solid #57595D;
       transition-duration: 0.6s;
     }
 
-    .loadSaleButton {
+    .submitLinkButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #000001;
+    }
+
+    .submitLinkButton:hover {
+      background-color: #000001;
+      color: white;
+      border: 2px solid #000001;
+      transition-duration: 0.6s;
+    }
+
+    .whitelistButton {
       background-color: white;
       color: black;
       border: 2px solid #faed27;
     }
 
-    .loadSaleButton:hover {
+    .whitelistButton:hover {
       background-color: #faed27;
       color: white;
       border: 2px solid #faed27;
       transition-duration: 0.6s;
     }
 
-    .loadImageButton {
+    .historyButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #ff6ec7;
+    }
+
+    .historyButton:hover {
+      background-color: #ff6ec7;
+      color: white;
+      border: 2px solid #ff6ec7;
+      transition-duration: 0.6s;
+    }
+
+    .loadArtworkButton {
       background-color: white;
       color: black;
       border: 2px solid #bc13fe;
     }
 
-    .loadImageButton:hover {
+    .loadArtworkButton:hover {
       background-color: #bc13fe;
       color: white;
       border: 2px solid #bc13fe;
@@ -317,8 +330,8 @@
                       data-dh-property-input-name="details"
                     />
                   </section>
-
-                  <button
+                  <a href="https://eth-converter.com/">(convert between Ξ and wei)</a></p>
+                  <button class="depositButton"
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="_6PY"
                   >
@@ -363,12 +376,12 @@
                       data-dh-property-input-name="EthValue"
                     />
                   </section>
-
-                  <button
+                  <a href="https://eth-converter.com/">(convert between Ξ and wei)</a></p>
+                  <button class="buyButton"
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="Le6u"
                   >
-                    📤
+                    💳
                   </button>
                 </aside>
               </section>
@@ -417,8 +430,8 @@
                       data-dh-property-input-name="forSale"
                     />
                   </section>
-
-                  <button
+                  <a href="https://eth-converter.com/">(convert between Ξ and wei)</a></p>
+                  <button class="updateButton"
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="IXmt"
                   >
@@ -431,7 +444,7 @@
           <header>
             <h3 class="sectionTitle">Mol's Residency</h3>
             </br>
-			<p class="paragraph"> Is gas too high to share your artwork? </br> Let us cover your gas. Learn more here.</p>
+			<p class="paragraph"> Is gas too high to mint your artwork? </br> Let us cover your gas. Learn more here.</p>
     </header>
       <header>
         <section>
@@ -443,7 +456,7 @@
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="updateGasMeter"
             >
-              <h3 class="functionTitle">Submit Latest Mint</h3>
+              <h3 class="functionTitle">Submit Link to Mint</h3>
               <section>
                 <aside>
                   <section>
@@ -455,7 +468,7 @@
                     />
                   </section>
 
-                  <button class="buyButton"
+                  <button class="submitLinkButton"
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="TBHR"
                   >
@@ -473,13 +486,13 @@
               data-dh-property-contract-name="MolVault"
               data-dh-property-method-name="gasMeter"
             >
-              <h3 class="functionTitle">Check UBI</mark></h3>
+              <h3 class="functionTitle">Whitelist</h3>
               <section>
                 <aside>
                   <section>
                     <input
                       type="text"
-                      placeholder="Your ETH Address"
+                      placeholder="ETH Address"
                       data-dh-property-method-id="FEpA"
                       data-dh-property-input-name="[0]"
                     />
@@ -489,10 +502,10 @@
                     data-dh-property-method-id="FEpA"
                     data-dh-property-outputs="true"
                   >
-                    <pre>Output...</pre>
+                    <pre>Enter your Eth Address</pre>
                   </div>
 
-                  <button
+                  <button class="whitelistButton"
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="FEpA"
                   >
@@ -516,7 +529,7 @@
                   <section>
                     <input
                       type="text"
-                      placeholder="Your ETH Address"
+                      placeholder="ETH Address"
                       data-dh-property-method-id="WXrC"
                       data-dh-property-input-name="[0]"
                     />
@@ -524,7 +537,7 @@
                   <section>
                     <input
                       type="text"
-                      placeholder="Mints"
+                      placeholder="Mints, e.g, 0, 1, 2"
                       data-dh-property-method-id="WXrC"
                       data-dh-property-input-name="[1]"
                     />
@@ -533,10 +546,9 @@
                     data-dh-property-method-id="WXrC"
                     data-dh-property-outputs="true"
                   >
-                    <pre>Output...</pre>
+                    <pre class="wrap">0 - First mint </br>  1 - second mint </br> 2 - third mint ...<pre>
                   </div>
-
-                  <button
+                  <button class="historyButton"
                     data-dh-property-invoke="true"
                     data-dh-property-method-id="WXrC"
                   >
@@ -558,8 +570,7 @@
                       name="inputbox1"
                     />
 					<img id="image" src="" />
-                    <button class="loadImageButton" id="loadImage"> 🖼️ </button>
-
+                    <button class="loadArtworkButton" id="loadImage"> 🖼️ </button>
                     <script type="text/javascript">
                       document.getElementById("loadImage").onclick = function() {
                       	var x = document.getElementById("imageURL").value;
